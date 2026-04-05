@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Estudio Contable</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f4f4;
+    }
+
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background: #34495e;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    section {
+      background: white;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #2c3e50;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Estudio Contable</h1>
+    <p>Profesionales a tu servicio</p>
+  </header>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" onclick="mostrarSeccion('equipo')">Equipo</a>
+    <a href="#" onclick="mostrarSeccion('contacto')">Contacto</a>
+  </nav>
+
+  <!-- MAIN -->
+  <main>
+    <section id="equipo">
+      <h2>Nuestro Equipo</h2>
+      <ul>
+        <li>Lorena Cuevas - Contadora</li>
+        <li>Mayra Cordova - Contadora</li>
+        <li>Marta Alvallay - Contadora</li>
+        <li>Fabricio Carabajal - Asesor</li>
+      </ul>
+    </section>
+
+    <section id="contacto" style="display:none;">
+      <h2>Contacto</h2>
+      <p>Email: impositivoestudioc@gmail.com</p>
+      <p>Teléfono: +54 9 11 2548 9693</p>
+      <p>Dirección: Localidad de Monte Grande, Provincia de Buenos, Argentina</p>
+    </section>
+  </main>
+
+  <script>
+    function mostrarSeccion(seccion) {
+      // Ocultar todas las secciones
+      document.getElementById('equipo').style.display = 'none';
+      document.getElementById('contacto').style.display = 'none';
+      // Mostrar la sección seleccionada
+      document.getElementById(seccion).style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
