@@ -2,26 +2,49 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Estudio Contable</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estudio Contable Carabajal</title>
+
   <style>
+    .whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  font-size: 28px;
+  padding: 15px;
+  border-radius: 50%;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+
+.whatsapp:hover {
+  background: #1ebe5d;
+  transform: scale(1.1);
+}
+    html {
+  scroll-behavior: smooth;
+}
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      background: #f4f4f4;
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
     }
 
     header {
-      background: #2c3e50;
+      background: #1e3a5f;
       color: white;
       padding: 20px;
       text-align: center;
     }
 
     nav {
-      background: #34495e;
-      display: flex;
-      justify-content: center;
-      padding: 10px 0;
+      background: #16324a;
+      padding: 10px;
+      text-align: center;
     }
 
     nav a {
@@ -41,61 +64,137 @@
 
     section {
       background: white;
-      padding: 15px;
-      margin-bottom: 15px;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+      padding: 20px;
+      border-radius: 10px;
     }
 
-    h2 {
+    h1, h2 {
       margin-top: 0;
-      color: #2c3e50;
     }
+
+    footer {
+      background: #1e3a5f;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+@media (max-width: 600px) {
+
+  header {
+    padding: 15px;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav a {
+    margin: 10px 0;
+    display: block;
+    background: #1e3a5f;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  main {
+    padding: 10px;
+  }
+
+  section {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+}
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+}
   </style>
 </head>
+
 <body>
 
-  <!-- HEADER -->
   <header>
-    <h1>Estudio Contable</h1>
-    <p>Profesionales a tu servicio</p>
+    <h1>Estudio Contable 4C</h1>
+    <p>Profesionales a  su servicio</p>
   </header>
 
-  <!-- NAV -->
   <nav>
-    <a href="#" onclick="mostrarSeccion('equipo')">Equipo</a>
-    <a href="#" onclick="mostrarSeccion('contacto')">Contacto</a>
-  </nav>
+  <div class="menu-toggle">☰</div>
 
-  <!-- MAIN -->
-  <main>
-    <section id="equipo">
-      <h2>Nuestro Equipo</h2>
-      <ul>
-        <li>Lorena Cuevas - Contadora</li>
-        <li>Mayra Cordova - Contadora</li>
-        <li>Marta Alvallay - Contadora</li>
-        <li>Fabricio Carabajal - Asesor</li>
-      </ul>
-    </section>
+  <div class="menu">
+    <a href="#inicio">Inicio</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#equipo">Equipo</a>
+    <a href="#contacto">Contacto</a>
+    <a href="#">Blog</a>
+    <a href="#">Desarrollo web</a>
+  </div>
+</nav>
+<main>
 
-    <section id="contacto" style="display:none;">
-      <h2>Contacto</h2>
-      <p>Email: impositivoestudioc@gmail.com</p>
-      <p>Teléfono: +54 9 11 2548 9693</p>
-      <p>Dirección: Localidad de Monte Grande, Provincia de Buenos, Argentina</p>
-    </section>
-  </main>
+  <section id="inicio">
+    <h2>¡Bienvenidos!</h2>
 
-  <script>
-    function mostrarSeccion(seccion) {
-      // Ocultar todas las secciones
-      document.getElementById('equipo').style.display = 'none';
-      document.getElementById('contacto').style.display = 'none';
-      // Mostrar la sección seleccionada
-      document.getElementById(seccion).style.display = 'block';
-    }
-  </script>
+    <h3>Nuestra Misión</h3>
 
+    <p><strong>Somos un estudio contable comprometido con brindar soluciones estratégicas, eficientes y de alto impacto a personas o empresas.</strong></p>
+
+    <p><strong>Nuestro equipo de profesionales está dedicado a ofrecer asesoramiento personalizado y servicios de alta calidad para satisfacer las necesidades contables de nuestros clientes.</strong></p>
+  </section>
+
+  <section id="servicios">
+    <h2>Servicios</h2>
+    <ul>
+      <li>Monotributo</li>
+      <li>Responsable Inscripto</li>
+      <li>Liquidación de impuestos</li>
+      <li>Asesoramiento contable</li>
+    </ul>
+  </section>
+
+  <section id="equipo">
+    <h2>Nuestro equipo</h2>
+    <ul>
+      <li>Lorena Cuevas</li>
+      <li>Mayra Cordova</li>
+      <li>Marta Alvallay</li>
+      <li>Fabricio Carabajal</li>
+    </ul>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>Email: impositivoestudioc@gmail.com</p>
+    <p>Teléfono: 11 2548 9693</p>
+  </section>
+
+</main>
+ 
+  <footer>
+  <p>© 2026 Estudio 4c</p>
+  <p>Fabricio Carabajal - Técnico en Contabilidad y desarrollo web</p>
+  <p>Buenos Aires, Argentina</p>
+</footer>
+<a href="https://wa.me/541125489693?text=Hola%20quiero%20asesoramiento" target="_blank" class="whatsapp">
+  💬
+</a>
 </body>
 </html>
